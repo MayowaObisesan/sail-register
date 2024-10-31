@@ -16,9 +16,12 @@ const Home: NextPage = () => {
         <link href="/favicon.ico" rel="icon" />
       </Head>
 
-      <main className="">
+      <main className="flex flex-col justify-center items-center w-full h-screen">
 
-        <h1>Welcome to SAIL BLOCKCHAIN DAPP INTEGRATION</h1>
+        <h1 className='font-medium text-6xl text-balance space-y-5'>
+          <span className='text-blue-600'>Welcome to</span>
+          <div className='font-black text-8xl'>SAIL BLOCKCHAIN DAPP INTEGRATION</div>
+        </h1>
 
       </main>
 

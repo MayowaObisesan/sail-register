@@ -1,6 +1,6 @@
 import { useAccount } from 'wagmi'
 import { useWriteContract } from 'wagmi'
-import { CONTRACT_ABI, CONTRACT_ADDRESS } from './constant'
+import { CONTRACT_ABI, CONTRACT_ADDRESS } from '../constant'
 import { useState } from 'react';
 
 export default function Page() {

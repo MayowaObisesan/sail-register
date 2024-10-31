@@ -1,5 +1,5 @@
 import { useReadContract } from 'wagmi'
-import { CONTRACT_ABI, CONTRACT_ADDRESS } from './constant'
+import { CONTRACT_ABI, CONTRACT_ADDRESS } from '../constant'
 
 export default function Page() {
     const result = useReadContract({
@@ -7,7 +7,7 @@ export default function Page() {
         address: CONTRACT_ADDRESS,
         functionName: 'getAllStudents',
     })
-    const data = result.data;
+    const data: any = result.data;
     console.log(data);
 
     return (
@@ -33,8 +33,8 @@ export default function Page() {
                                 </thead>
                                 <tbody className="divide-y divide-gray-200 dark:divide-neutral-700">
                                     {
-                                        data?.map((eachClass, index) => (
-                                            <tr>
+                                        data?.map((eachClass: any, index: number) => (
+                                            <tr key={index}>
                                                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200">{eachClass.name}</td>
                                                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200">{eachClass.gender}</td>
                                                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-neutral-200">{eachClass.age.toString()}</td>
